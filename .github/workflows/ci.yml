@@ -1,19 +1,13 @@
-name: CI
+name: CI básico
 
 on:
-  push:
-    branches: [ "main" ]
   pull_request:
-    branches: [ "main" ]
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout código
-        uses: actions/checkout@v4
+      - name: Mostrar mensaje
+        run: echo "Hola, GitHub Actions está funcionando 🎉"
 
-      - name: Ejecutar comando de prueba
-        run: echo "CI funcionando correctamente 🚀"
 
